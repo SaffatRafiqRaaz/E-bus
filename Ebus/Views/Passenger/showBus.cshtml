@@ -1,0 +1,63 @@
+﻿@model List<showBus>
+@{
+    ViewData["Title"] = "showBus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .myaction {
+        color : white;
+    }
+</style>
+<br />
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                @*<th scope="col">#</th>*@
+                <th scope="col">Bus number</th>
+                <th scope="col">Bus service</th>
+                <th scope="col">Male seat available</th>
+                <th scope="col">Female seat available</th>
+                <th scope="col">Distance</th>
+                <th scope="col">Fare</th>
+                <th scope="col">Ticket</th>
+
+                @* <th scope="col">Distance</th>
+        <th scope="col">Fare</th>*@
+
+
+            </tr>
+        </thead>
+<tbody>
+    @{
+        @*int a=0;*@
+        foreach (var i in Model)
+        {
+            @*<th scope="row">@a</th>*@
+    <tr>
+        <td>@i.busNumber</td>
+        <td>@i.busService</td>
+        <td>@i.maleSeat</td>
+        <td>@i.femaleSeat</td>
+        <td>@i.distance</td>
+        <td>@i.fare</td>
+        <td>
+            <button class="btn btn-light " style="color:white">
+                @Html.ActionLink("Purchase Ticket","request","Passenger", new  {number = @i.busNumber, male = @i.maleSeat ,female = @i.femaleSeat,fare = @i.fare} )
+            </button>
+        </td>
+    </tr>
+
+
+        }
+
+    }
+
+
+
+</tbody>
+        </table>
+
+</div>
+

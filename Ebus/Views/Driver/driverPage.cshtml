@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "driverPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center">Driver Page</h2>
+    <button class="btn btn-light">
+        @Html.ActionLink("Trip start", "Trip_start", "Driver")
+    </button>
+    <button class="btn btn-light">
+        @Html.ActionLink("My route", "driverRoute", "Driver")
+    </button>
+    <button class="btn btn-light">
+        @Html.ActionLink("Request List", "requestList", "Driver")
+    </button>
+    <button class="btn btn-light">
+        @Html.ActionLink("Check Passenger Entry", "checkEntry", "Driver")
+    </button>
+
+</div>
+
+
+

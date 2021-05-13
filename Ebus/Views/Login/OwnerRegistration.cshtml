@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "OwnerRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/customercss.css" rel="stylesheet" />
+<div class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form class="form-container" action="InputFromOwnerRegistration">
+                    <h1 class="text-center text-white">Registration</h1>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="name">Name:</label>
+
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="email">Email:</label>
+
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="pwd">Password:</label>
+
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="fpwd">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="name">Company name :</label>
+
+                        <input type="text" class="form-control" id="phone" placeholder="Enter Company name." name="company">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="name">Trade License :</label>
+
+                        <input type="text" class="form-control" id="phone" placeholder="Enter trade license." name="trade_license">
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*
+    <div class="container">
+        <h2 class="text-center ">Owner Registration form</h2>
+        <form class="form-horizontal" role="form" method="post" action="">
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="name">Owner Name:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="name">Phone:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="phone" placeholder="Enter Phone No." name="phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="pwd">Password:</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="name">Driving License:</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="phone" placeholder="Enter driving license." name="License">
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-offset-4 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+*@

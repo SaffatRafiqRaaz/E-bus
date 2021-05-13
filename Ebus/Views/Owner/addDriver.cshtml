@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "addDriver";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container {
+         background-image: url('../../wwwroot/images/road.jpg');
+    }
+    .form-container {
+        border: 0px solid #fff;
+        padding: 50px 60px;
+        margin-top: 5vh;
+        -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+        box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    }
+</style>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form class="form-container" action="inputFromDriver">
+                <h1 class="text-center text-white">Driver Registration</h1>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="name">Enter driver name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                </div>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="email">Enter License: </label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter driver id" name="License">
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+

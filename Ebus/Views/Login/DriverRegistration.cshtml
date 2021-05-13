@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "DriverRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Driver Registration form</h2>
+    <form class="form-horizontal" role="form" method="post" action="">
+        <div class="form-group">
+            <label class="control-label col-sm-4" for="name">User Name:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="control-label col-sm-4" for="pwd">License:</label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter License" name="fpwd">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4" for="pwd">Password:</label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter new password" name="spwd">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4" for="name">Phone:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="phone" placeholder="Enter Phone No." name="phone">
+            </div>
+        </div>
+       
+        <div class="col-sm-offset-4 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+</div>
+
+

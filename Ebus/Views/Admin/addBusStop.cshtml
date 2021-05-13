@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "addBusStop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Add BusStop</h2>
+<div class="container-fluid bg">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="form-container" action="inputFromBusStop">
+                <h1 class="text-center text-white font-weight-bold">Login</h1>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="exampleInputEmail1">Enter Bus Stop Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="stop" placeholder="Enter Bus stop name">
+
+                </div>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="exampleInputEmail1">Enter Latitude</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="latitude" placeholder="Enter Latitude">
+
+                </div>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="exampleInputEmail1">Enter longitude</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="longitude" placeholder="Enter longitude">
+
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+

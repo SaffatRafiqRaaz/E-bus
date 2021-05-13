@@ -1,0 +1,64 @@
+﻿@model List<review>
+@{
+    ViewData["Title"] = "request";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/logincss.css" rel="stylesheet" />
+<div class="container ">
+    <h6 class="text-center">If you are male, you can book at least one male seat. You can also buy female(must purchase a male seat ticket) seat ticket according to the availability of the seats. If you are female you can book any seat</h6>
+    <br />
+    <h6 class="text-center">@ViewData["av"]</h6>
+</div>
+<div class="container bg">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <br />
+            <br />
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Drivr Id</th>
+                        <th scope="col">Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var i in Model)
+                        {
+                    <tr>
+                        
+                        <td>@i.cusid</td>
+                        <td>@i.driId</td>
+                        <td>@i.rev</td>
+                    </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="form-container" action="InputFromRequest">
+                <h1 class="text-center text-white font-weight-bold">Seat Booking</h1>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="exampleInputEmail1">Enter number of male seat</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="maleSeat" placeholder="Enter number of male seat">
+                </div>
+                <div class="form-group">
+                    <label class="text-white font-weight-bold" for="exampleInputEmail1">Enter number of female seat</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="femaleSeat" placeholder="Enter number of female seat">
+                </div>
+                
+                <button type="submit" class="btn btn-success btn-block">Buy</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+

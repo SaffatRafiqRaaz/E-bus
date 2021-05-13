@@ -1,0 +1,71 @@
+﻿@model List<route>
+@{
+    ViewData["Title"] = "PassengerView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewData["userEmail"]</h1>
+<div class="container">
+
+
+    <br>
+    <div class="row">
+        <form class="form-inline " action="showBus" method="post">
+            <div class="col-md-4">
+
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Form</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="from">
+                        @foreach (var i in Model)
+                        {
+                            <option value=@i.busStop> @i.busStop</option>
+                        }
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">To</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="to">
+                        @foreach (var i in Model)
+                        {
+                            <option value=@i.busStop> @i.busStop</option>
+                        }
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+
+        </form>
+    </div>
+    <br />
+    <div class="container">
+        <div class="row">
+
+            <form class="form-inline">
+                <button class="btn btn-primary mb-2">Refund</button>
+
+                <button type="submit" class="btn btn-primary mb-2">Gift To</button>
+                <div class="form-group mb-2">
+                    <label for="staticEmail2" class="sr-only">Email</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="give customer id">
+                </div>
+                <button class="btn btn-light mb-2">
+                    @Html.ActionLink("My ticket", "showTicket", "Passenger")
+                </button>
+                <button class="btn btn-light mb-2">
+                    @Html.ActionLink("My traver Record", "record", "Passenger")
+                </button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+

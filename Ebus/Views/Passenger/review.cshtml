@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Review Driver</h2>
+    <form class="form-horizontal" action="inputFromReview">
+        <div class="form-group">
+            <label class="control-label col-sm-4" for="name">Rate your driver:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="name" placeholder="Give a comment" name="name">
+            </div>
+        </div>
+        
+        
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+

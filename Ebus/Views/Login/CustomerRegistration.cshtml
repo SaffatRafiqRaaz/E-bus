@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "CustomerRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/customercss.css" rel="stylesheet" />
+<div class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form class="form-container" action="InputFromCustomerRegistration">
+                    <h1 class="text-center text-white">Registration</h1>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="name">User Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="fpwd">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="pwd">New Password:</label>
+
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter new password" name="spwd">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="name">Phone:</label>
+
+                        <input type="text" class="form-control" id="phone" placeholder="Enter Phone No." name="phone">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold" for="radio-inline">Gender:  </label>
+
+                        <input class="text-white" type="radio" id="optradio" name="radio" value="male"><span class="text-white">Male</span>
+                        <input class="text-white" type="radio" id="optradio" name="radio" value="female"> <span class="text-white">Female</span>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label class="text-white font-weight-bold">Physical Disability :  </label>
+
+                        <input type="radio" id="optradio" name="physically_Disable" value="yes"> <span class="text-white">Yes</span>
+                        <input type="radio" id="optradio" name="physically_Disable" value="no"> <span class="text-white">No</span>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

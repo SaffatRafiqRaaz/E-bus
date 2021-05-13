@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "OwnerView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section>
+    <div class="form-group">
+        <h1 class="text-center">Owner</h1>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-outline-primary btn-lg">
+            <a asp-area="" asp-controller="Owner" asp-action="addDriver">Add Driver </a>
+        </button>
+        <button class="btn btn-outline-primary btn-lg">
+            <a asp-area="" asp-controller="Owner" asp-action="addBuses">Add Bus</a>
+        </button>
+        <button class="btn btn-outline-primary btn-lg">
+            <a asp-area="" asp-controller="Owner" asp-action="addRoute">Add Route</a>
+        </button>
+        <button class="btn btn-outline-primary btn-lg">
+            <a asp-area="" asp-controller="Owner" asp-action="Logout">Logout</a>
+        </button>
+    </div>
+</section>

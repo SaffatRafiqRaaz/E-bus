@@ -1,0 +1,2 @@
+# E-bus
+ E-Bus is an online bus service management system. Here customers can buy and book their tickets online and travel to their destination using generated ticket codes. They can also track their bus services, travel history, account balance.  Drivers can verify ticket codes manage routes and manage seat bookings. Bus service owners can oversee the services, manage transactions and modify services and routes. Admins have total control over the service. This project has been developed using C# with ASP.NET framework. and MSSQL.

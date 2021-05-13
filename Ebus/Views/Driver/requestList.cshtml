@@ -1,0 +1,35 @@
+﻿@model List<RequestList>
+@{
+    ViewData["Title"] = "requestList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Passenger request list</h2>
+    <table class="table">
+        <thead>
+            <tr>
+               
+                <th scope="col">Customer id</th>
+                <th scope="col">Code</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var i in Model)
+                {
+                    <tr>
+                        
+                        <td>@i.id</td>
+                        <td>@i.code</td>
+
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+
+</div>
+

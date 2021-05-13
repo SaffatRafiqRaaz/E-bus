@@ -1,0 +1,45 @@
+﻿@model List<showcustomer>
+@{
+    ViewData["Title"] = "showPassenger";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <h2 class="text-center">All Passengers</h2>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">phone</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Physical Disable</th>
+                <th scope="col">Remove Passenger</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var i in Model)
+                {
+                    <tr>
+
+                        <td>@i.name</td>
+                        <td>@i.email</td>
+                        <td>@i.phone</td>
+                        <td>@i.gender</td>
+                        <td>@i.physical</td>
+                        <td>
+                            <button type ="button" class="btn btn-outline-danger">
+                                @Html.ActionLink("Remove", "removePassenger", "Admin", new { eml = @i.email })
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>

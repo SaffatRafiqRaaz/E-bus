@@ -1,0 +1,47 @@
+﻿@model List<route>
+@{
+    ViewData["Title"] = "addRoute";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <form action="inputFromOption">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select multiple class="form-control" id="exampleFormControlSelect1" name="input">
+                    @foreach (var i in Model)
+                    {
+                        <option value=@i.busStop> @i.busStop</option>
+                    }
+                </select>
+            </div>
+
+           
+
+
+            <br>
+            <div class="form-group">
+                <input class="form-control mt-2"  type="text" name="textBox" id="textBox" value=@TempData["inputoption"] />
+            </div>
+       
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+
+        </form>
+       
+            
+            <button>
+                @Html.ActionLink("add", "routeValue", "Owner", new {totalRoute = TempData["inputoption"] })
+               
+            </button>
+      
+        
+    </div>
+    
+</div>
+<script>
+    function myFun() {
+        var a = document.getElementById('textBox').value;
+        document.getElementById("second").value = a;
+    }
+</script>

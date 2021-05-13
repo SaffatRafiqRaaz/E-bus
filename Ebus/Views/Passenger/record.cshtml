@@ -1,0 +1,40 @@
+﻿@model List<Record>
+@{
+    ViewData["Title"] = "record";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center">My travel History</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th scope="col">Driver Id</th>
+                <th scope="col">Bus number/th>
+                <th scope="col">Fare</th>
+                <th scope="col">Starting Location</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var i in Model)
+                {
+            <tr>
+                <td>@i.driverId</td>
+                <td>@i.driverId</td>
+                <td>@i.busNumber</td>
+                <td>@i.fare</td>
+                <td>@i.from</td>
+                <td>@i.to</td>
+                <td>@i.date</td>
+                
+            </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
